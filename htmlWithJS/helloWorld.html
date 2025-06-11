@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Erlebnis - Willkommen im Spiel</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #f45d5d, #ffb347);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+            a:hover {
+                background-color: #ffcc00;
+                color: #000;
+            }
+
+        img {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        ul li {
+            color: #fff;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            width: 200px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #ffcc00;
+            }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .correct {
+            color: #28a745;
+        }
+
+        .incorrect {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Willkommen im Casino Erlebnis!</h1>
+    <h2>Bereit auf spannende Gewinne?</h2>
+    <h3>Erlebe die besten Casino-Spiele online!</h3>
+
+    <p>Entdecke unsere besten Angebote und Belohnungen:</p>
+    <a href="https://rainbet.com/rewards" target="_blank">
+        Da geht es zum Casino!
+    </a>
+
+    <p class="section">
+        <img src="https://pictures.ua.tribuna.com/image/050983ba-b539-4856-8a67-99303e7d687d?width=1920&quality=70" alt="Casino Image">
+    </p>
+
+    <div class="section">
+        <h2>Warum du bei uns spielen solltest:</h2>
+        <ul>
+            <li>Vielzahl an Casinospielen</li>
+            <li>Exklusive Boni und Belohnungen</li>
+            <li>Einfaches und sicheres Spielumfeld</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Mathematische Herausforderung:</h2>
+        <p>Was ist das Ergebnis von <strong>8 × (15 − 3) ÷ 4 + 6</strong>?</p>
+        <p><em>Berechne Schritt für Schritt und gib dein Ergebnis ein!</em></p>
+
+        <!-- Eingabefeld und Button -->
+        <input type="number" id="userAnswer" placeholder="Dein Ergebnis hier">
+        <button onclick="checkAnswer()">Antwort überprüfen</button>
+
+        <p id="resultMessage" class="result"></p>
+    </div>
+
+    <div class="section">
+        <h2>Automaten im Casino</h2>
+        <p>Entdecke die Vielzahl an Automaten, die dir spannende Spielerlebnisse bieten!</p>
+        <ul>
+            <li><strong style="color:#000000;">Slot-Automaten:</strong> Klassische Spielautomaten mit verschiedenen Themen und spannenden Features.</li>
+            <li><strong style="color:#000000;">Video-Slots:</strong> Moderne Automaten mit beeindruckender Grafik, Animationen und aufregenden Bonusfunktionen.</li>
+            <li><strong style="color:#000000;">Progressive Jackpots:</strong> Spielautomaten, bei denen der Jackpot mit jeder Drehung steigt und riesige Gewinne zum erspielen sind.</li>
+            <li><strong style="color:#000000;">Elektronische Tischspiele:</strong> Automaten, die beliebte Tischspiele wie Roulette oder Blackjack simulieren.</li>
+            <li><strong style="color:#000000;">3D Slots:</strong> Interaktive Spielautomaten mit hochwertigen 3D-Grafiken, die das Spielerlebnis auf ein neues Level heben.</li>
+        </ul>
+    </div>
+
+    <!-- Link zur zweiten Seite -->
+    <div class="section">
+        <a href="./ZweiteSeite.html">Zur zweiten Seite mit Informationen über den Ersteller</a>
+    </div>
+
+    <script>function checkAnswer() {
+            const correctAnswer = 8 * (15 - 3) / 4 + 6; // Die mathematische Berechnung
+            const userAnswer = document.getElementById("userAnswer").value;
+            const resultMessage = document.getElementById("resultMessage");
+
+            if (parseFloat(userAnswer) === correctAnswer) {
+                resultMessage.textContent = "Richtig! Du hast es geschafft.";
+                resultMessage.className = "result correct";
+            } else {
+                resultMessage.textContent = "Leider falsch. Versuch es nochmal!";
+                resultMessage.className = "result incorrect";
+            }
+        }</script>
+
+</body>
+</html>
